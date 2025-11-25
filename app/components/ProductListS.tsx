@@ -1,6 +1,7 @@
 import React from 'react'
 // import ProductListCL from "@/app/components/ProductListCL"
 import { Product } from '../utils/type'
+import Image from 'next/image'
 
 const ProductListS = async () => {
     const products: Product[] = await fetch(
@@ -15,7 +16,12 @@ const ProductListS = async () => {
                         <div className="flex gap-5">
                             <div className="size-70 border border-gray-100 shadow-md shadow-gray-100  bg-white flex flex-col 
                             items-center justify-center gap-2 p-5 rounded-lg">
-                                <img className="size-20" src={each.image} alt={each.title} />
+                                <Image className="size-20"
+                                    src={each.image}
+                                    alt={each.title}
+                                    width={200}
+                                    height={200}
+                                />
 
                                 <p className="font-semibold text-sm text-center">{each.title}</p>
                                 <h1 className='capitalize'>{each.category}</h1>

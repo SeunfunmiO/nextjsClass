@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useEffect, useState } from "react"
 
 
@@ -33,7 +34,12 @@ const ProductList = () => {
                     <div className="flex gap-5">
                         {/* <p>{each.id}.</p> */}
                         <div className="size-70 border flex flex-col items-center justify-center gap-2">
-                            <img className="size-20" src={each.image} alt={each.title} />
+                            <Image className="size-20"
+                             src={each.image} 
+                            alt={each.title}
+                            width={200}
+                            height={200}
+                             />
                             <p className="font-semibold text-sm text-center">{each.title}</p>
                             <h1>{each.category}</h1>
                             {/* <span><BsStarFill size={10} fill="gold" />{rating.rate} </span> */}

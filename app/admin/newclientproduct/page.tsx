@@ -21,7 +21,7 @@ const Page = () => {
                     placeholder='Price' />
 
                 {/* <Button text='Add Product' /> */}
-                <button formAction={addProduct} className='px-3 py-2 rounded bg-teal-800 text-white'>Add Product</button>
+                {/* <button formAction={addProduct} className='px-3 py-2 rounded bg-teal-800 text-white'>Add Product</button> */}
             </form>
         </div>
     )

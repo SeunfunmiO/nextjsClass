@@ -2,7 +2,7 @@
 // const name: string | undefined;
 // const isOld: boolean | undefined
 
-import { User, UserProfile } from "../utils/type"
+import { User} from "../utils/type"
 
 // const students: string[] = ["Felix", "Cynthia", "Gentle"];
 // const users: ["Felix", "Cynthia", "Gentle"];
@@ -46,17 +46,17 @@ const newUser: User[] = [
 // }
 //returning the type of user | scope of type=()=>
 // const getUser: () => User = () => {}
-const getUser: (id: number) => User | undefined = (id: number) => {
-    const userId = newUser.find((each) => each.id === id)
-    return userId
-    // const user: User = {
-    //     id: 1,
-    //     name: "Felix",
-    //         department: 'Software Engineering',
-    //         age: 18
-    // }
-    // return user
-}
+// const getUser: (id: number) => User | undefined = (id: number) => {
+//     const userId = newUser.find((each) => each.id === id)
+//     return userId
+//     // const user: User = {
+//     //     id: 1,
+//     //     name: "Felix",
+//     //         department: 'Software Engineering',
+//     //         age: 18
+//     // }
+//     // return user
+// }
 
 // user.age = 12
 

@@ -79,7 +79,7 @@ export default async function ProductsPage() {
                                         <td className="px-6 py-4">
                                             <div className="flex items-center justify-end gap-2">
                                                 <DeleteButton id={product._id.toString()} />
-                                                <EditButton id={product._id.toString()} />
+                                                <EditButton id={product._id.toString()} product={product} />
                                             </div>
                                         </td>
                                     </tr>
@@ -105,7 +105,7 @@ export default async function ProductsPage() {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <DeleteButton id={product._id.toString()} />
-                                    <EditButton id={product._id.toString() } />
+                                    <EditButton id={product._id.toString()} product={product} />
                                 </div>
                             </div>
                         ))}

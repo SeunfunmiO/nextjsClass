@@ -1,4 +1,4 @@
-import { jwtVerify, SignJWT } from "jose";
+import { JWTPayload, jwtVerify, SignJWT } from "jose";
 import "server-only"
 import { jwtPayload } from "./type";
 import { cookies } from "next/headers";
@@ -17,11 +17,15 @@ export const encrypt = (payload: { _id: string }) => {
     return token
 }
 
+// interface MyPayload extends JWTPayload{
+//     _id:string
+// }
+
 export const decrypt = async (token: string): Promise<jwtPayload> => {
     try {
         const { payload } = await jwtVerify(token, encodedKey, { algorithms: ['HS256'] })
         //{payload:{_id:""}}
-        return { ...payload, success: true }
+        return { ...payload , success: true }
     } catch (error) {
         return { success: false }
     }

@@ -21,7 +21,7 @@ export type UserProfile = User & {
 //     phone: string
 //     email: string
 //     password: string
-// }
+// } 
 
 // export type BasicUser = Pick<UserProfile, 'name' | 'phone'>
 export type BasicUser = Omit<UserProfile, 'password'>
@@ -38,6 +38,6 @@ export interface Product {
 export interface jwtPayload {
     _id?:string
     iat?:number
-    exp? : string
+    exp? : number
     success:boolean
 }

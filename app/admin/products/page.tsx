@@ -2,6 +2,7 @@
 import { Suspense } from "react"
 import Loading from "./loading"
 import ProductListS from "@/app/components/ProductListS"
+// import styles from './products.module.css'
 // import { Product } from "@/app/utils/type"
 
 
@@ -38,6 +39,8 @@ const Page = async () => {
             <Suspense fallback={ <Loading/>}>
                 <ProductListS />
             </Suspense>
+
+            {/* <div className={styles.card}></div> */}
         </div>
     )
 }

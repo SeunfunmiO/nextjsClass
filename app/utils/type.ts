@@ -34,3 +34,10 @@ export interface Product {
     price: number
     rating: number
 }
+
+export interface jwtPayload {
+    _id?:string
+    iat?:number
+    exp? : string
+    success:boolean
+}
